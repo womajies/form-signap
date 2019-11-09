@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans|Work+Sans:300,400,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<form action="/signup/" name="sign-up" class="form" action="post">
+			<div class="form__aside">
+				<div class="form__aside-text">
+				<p>Sign up</p>
+			</div>
+		</div>
+			<div class="form__reg">
+				<div class="form__reg-wrapper">
+					<legend class="form__legend">
+						<h2 class="form__title">New user?</h2>
+						<span class="form__description">
+							Use the form below to create your account.
+						</span>
+					</legend>
+					
+					<div class="form__reg-left">
+						<label for="name" class="form__label">First Name</label>
+						<input type="text" class="form__input" id="name" name="name" placeholder="Write name" required autofocus>
+						
+						<label for="nationality" class="form__label">Nationality</label>
+						<select name="nationality" id="nationality" required class="form__input">
+							<option value="russian">Russian</option>
+							<option value="american" selected>American</option>
+							<option value="german">German</option>
+							<option value="frenchman">Frenchman</option>
+						</select>
+						
+						<label for="date" class="form__label">Date of Birth</label>
+						<input type="date" pattern="\d{1,2}/\d{1,2}/\d{4}" required class="form__input">
+						
+						<div class="form__password-1">
+							<label for="password" class="form__label">Password</label>
+							<input type="password" pattern="(?=.*\d)(?=.*[a-z]).{8,}" class="form__input" id="password" name="password" required>
+						</div>
+					</div>
+					
+					<div class="form__reg-right">
+						<label for="surname" class="form__label">Last Name</label>
+						<input type="text" class="form__input" id="surname" name="surname" placeholder="Write last name" required>
+						
+						<label for="email" class="form__label">E-mail</label>
+						<input type="email" class="form__input" id="email" name="email" placeholder="alice.miller@yahoo.com" required>
+						
+						<label for="gender" class="form__gender-label"><p>Gender</p>
+							<input type="radio" value="man" class="gender" id="gender" name="gender"><span>Male</span>
+						</label>
+						<label for="gender2" class="form__gender-label">
+							<input type="radio" value="woman" checked class="gender" id="gender2" name="gender">Female
+						</label>
+						
+						<div class="form__password-2">
+							<label for="confirm-password" class="form__label">Confirm Password</label>
+							<input type="password" pattern="(?=.*\d)(?=.*[a-z]).{8,}" class="form__input" id="confirm-password" name="password" required>
+						</div>
+					</div>
+					
+					<div class="form__reg-complete">
+						<span>Have an account? <a href="/login" class="form__login">Login</a>
+						</span>
+						
+						<button type="submit" name="submit" class="form__register-btn">Complete Signup</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
